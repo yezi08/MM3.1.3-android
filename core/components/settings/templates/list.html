@@ -1,0 +1,45 @@
+<ion-view view-title="{{ 'mm.settings.settings' | translate }}">
+    <mm-split-view component="mmCoreSettingsIndex">
+        <ion-content mm-state-class>
+            <ul class="list">
+<!-- START: XJTLU ADDITION 03/Aug/2016 - hide the "general" section in setting
+                <li>
+                    <a class="item" mm-split-view-link="site.mm_settings-general" title="{{ 'mm.settings.general' | translate }}">
+                        {{ 'mm.settings.general' | translate }}
+                    </a>
+                </li>
+	END: XJTLU ADDITION 03/Aug/2016
+-->
+                <li>
+                    <a class="item" mm-split-view-link="site.mm_settings-spaceusage" title="{{ 'mm.settings.spaceusage' | translate }}">
+                        {{ 'mm.settings.spaceusage' | translate }}
+                    </a>
+                </li>
+                <li>
+                    <a class="item" mm-split-view-link="site.mm_settings-synchronization" title="{{ 'mm.settings.synchronization' | translate }}">
+                        {{ 'mm.settings.synchronization' | translate }}
+                    </a>
+                </li>
+                <li>
+                    <a class="item" ng-if="isIOS" mm-split-view-link="site.sharedfiles-list({manage: true})" title="{{ 'mm.sharedfiles.sharedfiles' | translate }}">
+                        {{ 'mm.sharedfiles.sharedfiles' | translate }}
+                    </a>
+                </li>
+                <li>
+                    <a class="item" mm-split-view-link="site.mm_settings-about" title="{{ 'mm.settings.about' | translate }}">
+                        {{ 'mm.settings.about' | translate }}
+                    </a>
+                </li>
+<!--START: XJTLU ADDITION 03/Aug/2016 - hide the "general" section in setting
+
+                <li>
+                    <a class="item" mm-split-view-link="site.mm_settings-general" title="{{ 'mm.settings.general' | translate }}">
+                        {{ 'mm.settings.general' | translate }}
+                    </a>
+                </li>
+-->
+<!--code end-->
+            </ul>
+        </ion-content>
+    </mm-split-view>
+</ion-view>
